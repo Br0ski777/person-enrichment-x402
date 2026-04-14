@@ -12,7 +12,7 @@ export const API_CONFIG: ApiConfig = {
       price: "$0.01",
       description: "Enrich a person profile from their email address",
       toolName: "person_enrich_from_email",
-      toolDescription: `Use this when you need to find information about a person from their email address. Returns a structured JSON profile aggregated from public data sources.
+      toolDescription: `Enrich a person's profile with additional data from their email address, name, domain, or LinkedIn URL. Alternative to Apollo people-enrich at 5x lower cost. Returns structured JSON with full contact and professional details.
 
 1. fullName (string) -- first and last name
 2. jobTitle (string) -- current role / position
@@ -27,7 +27,7 @@ export const API_CONFIG: ApiConfig = {
 
 Example output: {"fullName":"Jane Smith","jobTitle":"VP Engineering","company":"Acme Corp","linkedin":"https://linkedin.com/in/janesmith","github":"https://github.com/janesmith","location":"San Francisco, CA","avatar":"https://gravatar.com/abc123","domain":"acme.com"}
 
-Use this BEFORE outreach to personalize emails, enrich CRM records, or research decision-makers. Essential for sales prospecting, lead qualification, and account mapping.
+Use this BEFORE outreach to personalize emails, enrich CRM records, search for people/contacts, or research decision-makers. Essential for sales prospecting, lead qualification, and account mapping. Drop-in replacement for Apollo person enrichment.
 
 Do NOT use for email validation -- use email_verify_address instead. Do NOT use for company data -- use company_enrich_from_domain instead. Do NOT use for social profiles by username -- use social_lookup_profile instead. Do NOT use for finding email addresses -- use email_find_by_name instead.`,
       inputSchema: {
