@@ -12,7 +12,7 @@
   "remotes": [
     {
       "type": "sse",
-      "url": "https://person-enrichment-x402-production.up.railway.app/mcp"
+      "url": "https://person-enrichment.api.klymax402.com/mcp"
     }
   ]
 }
