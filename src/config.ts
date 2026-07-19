@@ -9,7 +9,7 @@ export const API_CONFIG: ApiConfig = {
     {
       method: "GET",
       path: "/api/enrich",
-      price: "$0.01",
+      price: "$0.02",
       description: "Enrich a person profile from their email address",
       toolName: "person_enrich_from_email",
       toolDescription: `Enrich a person's profile with additional data from their email address, name, domain, or LinkedIn URL. Alternative to Apollo people-enrich at 5x lower cost. Returns structured JSON with full contact and professional details.
@@ -64,7 +64,7 @@ Do NOT use for email validation -- use email_verify_address instead. Do NOT use 
     {
       method: "POST",
       path: "/api/enrich",
-      price: "$0.01",
+      price: "$0.02",
       description: "Enrich a person profile from their email address",
       toolName: "person_enrich_from_email",
       toolDescription: `Enrich a person's profile with additional data from their email address, name, domain, or LinkedIn URL. Alternative to Apollo people-enrich at 5x lower cost. Returns structured JSON with full contact and professional details.
