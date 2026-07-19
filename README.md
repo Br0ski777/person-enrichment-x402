@@ -35,7 +35,28 @@ Any x402-aware client ([`@x402/fetch`](https://www.npmjs.com/package/@x402/fetch
 
 | Tool | Method | Path | Price | Description |
 |---|---|---|---|---|
-| `person_enrich_from_email` | GET | `/api/enrich` | $0.01 | Enrich a person profile from their email address |
+| `person_enrich_from_email` | GET | `/api/enrich` | $0.02 | Enrich a person profile from their email address |
+| `person_enrich_from_email` | POST | `/api/enrich` | $0.02 | Enrich a person profile from their email address |
+
+### `person_enrich_from_email`
+
+Enrich a person's profile with additional data from their email address, name, domain, or LinkedIn URL. Alternative to Apollo people-enrich at 5x lower cost. Returns structured JSON with full contact and professional details.
+
+**Parameters**
+
+| Name | Type | Required | Description |
+|---|---|---|---|
+| `email` | string | yes | Email address to enrich (e.g. john@company.com) |
+
+Example response:
+
+```json
+{"fullName":"Jane Smith","jobTitle":"VP Engineering","company":"Acme Corp","linkedin":"https://linkedin.com/in/janesmith","github":"https://github.com/janesmith","location":"San Francisco, CA","avatar":"https://gravatar.com/abc123","domain":"acme.com"}
+```
+
+**When to use**: outreach to personalize emails, enrich CRM records, search for people/contacts, or research decision-makers. Essential for sales prospecting, lead qualification, and account mapping. Drop-in replacement for Apollo person enrichment.
+
+**Not for**: email validation (use `email_verify_address`), company data (use `company_enrich_from_domain`), social profiles by username (use `social_lookup_profile`), finding email addresses (use `email_find_by_name`).
 
 ### `person_enrich_from_email`
 
@@ -59,6 +80,7 @@ Example response:
 
 ## Example agent prompts
 
+- "Enrich a person's profile with additional data from their email address, name, domain, or LinkedIn URL"
 - "Enrich a person's profile with additional data from their email address, name, domain, or LinkedIn URL"
 
 ## Payment
